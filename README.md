@@ -1,6 +1,8 @@
 # MarTech Mission design system
 
-Shared design tokens for MarTech Mission internal apps. v0.1.0 is a token file and this documentation. It is not a component library. There is no build, no npm package, and no React or Storybook.
+Shared design tokens for MarTech Mission internal apps. The published surface is `tokens.css` plus these docs. It is not a component library. There is no build, no npm package, and no React or Storybook.
+
+`preview.html` is a static gallery you open in a browser next to `tokens.css`. It is a preview, not a published component API. Apps do not copy it.
 
 David owns releases. Apps adopt a tag when they choose. Nothing here tracks `main`.
 
