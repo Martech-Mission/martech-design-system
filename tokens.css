@@ -1,0 +1,123 @@
+/* MarTech Mission design tokens 0.1.0
+   https://github.com/Martech-Mission/martech-design-system/releases/tag/v0.1.0
+
+   Brand colors are the Brand Guidelines V1.0 values.
+   Blocks marked "product extension" are not brand colors.
+   Peach (--brand) is identity only: logo, active nav, avatar wash.
+   It is never a button fill and never a status color.
+   Apps load Poppins themselves. This repo ships no font files.
+*/
+
+:root {
+  /* ------------------------------------------------------------------
+     Brand
+     ------------------------------------------------------------------ */
+  --brand: #e18972; /* Martech Peach */
+  --brand-50: #fdf1ed; /* product-extension wash */
+  --brand-100: #f9ddd3; /* product-extension wash */
+  --brand-500: var(--brand);
+  --brand-700: #a84a32; /* product-extension ink on a peach wash */
+
+  /* ------------------------------------------------------------------
+     Product extension: warm gray ramp
+     --gray-900 is a ramp step. Text and action use brand black, not this.
+     ------------------------------------------------------------------ */
+  --gray-0: #ffffff;
+  --gray-25: #fbfaf9;
+  --gray-50: #f6f4f2;
+  --gray-100: #eeebe8;
+  --gray-200: #e3dfdb;
+  --gray-300: #cfcac4;
+  --gray-500: #8a847e;
+  --gray-600: #6b6560;
+  --gray-800: #3a3632;
+  --gray-900: #2b2b2b;
+
+  /* ------------------------------------------------------------------
+     Product extension: status
+     One meaning each. Not brand colors.
+     ------------------------------------------------------------------ */
+  --success-50: #e8f4ec;
+  --success-700: #1f7a4a;
+  --warning-50: #fff6e0;
+  --warning-300: #ecc66a;
+  --warning-700: #8a5a00;
+  --danger-50: #fdecea;
+  --danger-700: #b42318;
+
+  /* Info and links are brand Vivid Blue. The light wash is a product extension. */
+  --info: #186aea;
+  --link: var(--info);
+  --info-50: #eaf1fc;
+  --info-700: var(--info);
+
+  /* ------------------------------------------------------------------
+     Product extension: heat ramp
+     One hue, four steps, for density shading. Not a brand color.
+     ------------------------------------------------------------------ */
+  --data-1: #eef2f9;
+  --data-2: #dbe4f3;
+  --data-3: #c3d2ec;
+  --data-4: #a6bce2;
+
+  /* ------------------------------------------------------------------
+     Roles
+     Components use these, not raw grays or raw brand hexes.
+     ------------------------------------------------------------------ */
+  --bg-app: var(--gray-25);
+  --bg-surface: var(--gray-0);
+  --bg-subtle: var(--gray-50);
+  --bg-hover: var(--gray-100);
+  --border: var(--gray-200);
+  --border-strong: var(--gray-300);
+  --text: #1e1e1e; /* brand black */
+  --text-muted: var(--gray-600);
+  --text-faint: var(--gray-500);
+  --action: var(--text); /* brand black. Never --brand. */
+  --action-hover: #161616; /* product extension, darker than brand black */
+  --focus-ring: 0 0 0 2px var(--gray-0), 0 0 0 4px var(--text);
+
+  /* ------------------------------------------------------------------
+     Type
+     Both families are Poppins. WS Paradose and Inter are not used.
+     ------------------------------------------------------------------ */
+  --font-ui: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-brand: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Consolas, monospace;
+  --text-xs: 11px;
+  --lh-xs: 16px;
+  --text-sm: 12px;
+  --lh-sm: 16px;
+  --text-md: 13px;
+  --lh-md: 20px;
+  --text-base: 14px;
+  --lh-base: 22px;
+  --text-lg: 16px;
+  --lh-lg: 24px;
+  --text-xl: 20px;
+  --lh-xl: 28px;
+
+  /* ------------------------------------------------------------------
+     Space (4px base), shape, size
+     ------------------------------------------------------------------ */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+  --radius-full: 999px;
+
+  --control-sm: 28px;
+  --control-md: 32px;
+  --control-lg: 40px;
+  --row-comfortable: 36px;
+  --row-compact: 30px;
+
+  --shadow-popover: 0 8px 24px rgba(30, 30, 30, 0.12), 0 1px 2px rgba(30, 30, 30, 0.06);
+}
