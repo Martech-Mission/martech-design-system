@@ -1,6 +1,6 @@
 # MarTech Mission design system
 
-Shared design tokens for MarTech Mission internal apps. The published surface is `tokens.css` plus these docs. It is not a component library. There is no build, no npm package, and no React or Storybook.
+Shared design tokens for MarTech Mission internal apps. The published surface is `tokens.css`, optional `components.css`, and these docs. There is no build, no npm package, and no React or Storybook.
 
 `preview.html` is a static gallery you open in a browser next to `tokens.css`. It is a preview, not a published component API. Apps do not copy it.
 
@@ -10,7 +10,8 @@ David owns releases. Apps adopt a tag when they choose. Nothing here tracks `mai
 
 | File | Purpose |
 | --- | --- |
-| `tokens.css` | CSS custom properties. The only file an app copies. |
+| `tokens.css` | CSS custom properties. Copy this from a tag. |
+| `components.css` | Optional button, field, badge, and banner classes. Copy it the same way. |
 | `tokens.md` | What each token means, and which ones are product extensions. |
 | `brand/README.md` | Brand color, type, and logo rules this file is allowed to follow. |
 | `CHANGELOG.md` | What changed in each tag. |
@@ -33,6 +34,8 @@ printf '%s\n' v0.1.0 > public/css/TOKENS_VERSION
 
 A later tag is adopted the same way, in that app's own change, after reading `CHANGELOG.md`.
 
+Copy `components.css` from that same tag if the app wants the classes. They are optional, and they do not change the tokens. Timesheets would put the file at `public/css/components.css` and still record the one tag in `public/css/TOKENS_VERSION`. Link `tokens.css` before `components.css`.
+
 ## Consumers
 
 | App | Pinned | Copy path |
@@ -46,7 +49,7 @@ PDF reports, public share pages, and email are outside v0.1. They do not use thi
 Tags are [semver](https://semver.org/spec/v2.0.0.html). `CHANGELOG.md` follows Keep a Changelog.
 
 - **Patch:** comments, docs, or a fix that does not change a painted value.
-- **Minor:** a new token. Existing tokens still mean the same thing.
+- **Minor:** a new token or an optional component class. Existing tokens still mean the same thing.
 - **Major:** a renamed or removed token, or a role that changes meaning (for example `--action` no longer being brand black).
 
 The changelog entry, the tag, and a row in the table above are the announcement. There is no automatic upgrade.

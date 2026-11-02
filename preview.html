@@ -7,9 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" />
 <link rel="stylesheet" href="tokens.css" />
+<link rel="stylesheet" href="components.css" />
 <style>
-/* Preview chrome and example controls. Not a published component API.
-   Colors, type, space, and radius come from tokens.css variables only. */
+/* Gallery chrome only. Control classes live in components.css. */
 * { box-sizing: border-box; }
 body {
   margin: 0;
@@ -78,75 +78,12 @@ code { font-family: var(--font-mono); font-size: var(--text-xs); color: var(--te
 a { color: var(--link); }
 .row { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center; }
 .stack { display: flex; flex-direction: column; gap: var(--space-2); max-width: 280px; }
-
-/* Example controls — this file only */
-.btn {
-  height: var(--control-md);
-  display: inline-flex;
-  align-items: center;
-  padding: 0 var(--space-3);
-  border-radius: var(--radius-md);
-  border: 1px solid transparent;
-  background: transparent;
-  font: 500 var(--text-md) / var(--lh-md) var(--font-ui);
-  color: var(--text);
-  cursor: pointer;
-}
-.btn:focus-visible { outline: none; box-shadow: var(--focus-ring); }
-.btn.primary { background: var(--action); color: var(--gray-0); }
-.btn.primary:hover { background: var(--action-hover); }
-.btn.secondary { background: var(--bg-surface); border-color: var(--border-strong); }
-.btn.secondary:hover { background: var(--bg-subtle); }
-.btn.ghost:hover { background: var(--bg-hover); }
-.btn.danger { background: var(--danger-700); color: var(--gray-0); }
-.btn.focus { box-shadow: var(--focus-ring); }
-.field { display: flex; flex-direction: column; gap: var(--space-1); }
-.field span { font-size: var(--text-sm); line-height: var(--lh-sm); font-weight: 500; color: var(--text-muted); }
-.input {
-  height: var(--control-md);
-  padding: 0 var(--space-3);
-  border: 1px solid var(--border-strong);
-  border-radius: var(--radius-md);
-  background: var(--bg-surface);
-  color: var(--text);
-  font: var(--text-md) / var(--lh-md) var(--font-ui);
-}
-.input::placeholder { color: var(--text-faint); }
-.input:focus-visible { outline: none; box-shadow: var(--focus-ring); }
-.badge {
-  display: inline-flex;
-  align-items: center;
-  height: var(--space-5);
-  padding: 0 var(--space-2);
-  border-radius: var(--radius-full);
-  background: var(--bg-hover);
-  color: var(--text-muted);
-  font-size: var(--text-xs);
-  line-height: var(--lh-xs);
-  font-weight: 600;
-}
-.badge.success { background: var(--success-50); color: var(--success-700); }
-.badge.warning { background: var(--warning-50); color: var(--warning-700); }
-.badge.danger { background: var(--danger-50); color: var(--danger-700); }
-.badge.info { background: var(--info-50); color: var(--info-700); }
-.badge.brand { background: var(--brand-50); color: var(--brand-700); }
-.banner {
-  display: flex;
-  gap: var(--space-3);
-  padding: var(--space-3);
-  border-radius: var(--radius-md);
-  border: 1px solid var(--info);
-  background: var(--info-50);
-  color: var(--info);
-  font-size: var(--text-md);
-  line-height: var(--lh-md);
-}
 </style>
 </head>
 <body>
 <div class="wrap">
   <h1>Token preview</h1>
-  <p class="lede">A static look at <code>tokens.css</code>. This page is not a component API. Poppins is loaded for the preview only. This repository does not ship the font.</p>
+  <p class="lede">A static look at <code>tokens.css</code> and the optional classes in <code>components.css</code>. This page is not the API. Poppins is loaded for the preview only. This repository does not ship the font.</p>
 
   <section>
     <h2>Brand</h2>
@@ -249,6 +186,7 @@ a { color: var(--link); }
       <button class="btn secondary" type="button">Secondary</button>
       <button class="btn ghost" type="button">Ghost</button>
       <button class="btn danger" type="button">Danger</button>
+      <button class="btn danger-ghost" type="button">Danger ghost</button>
       <button class="btn secondary focus" type="button">Focused</button>
     </div>
     <p class="note">Primary uses <code>--action</code> (brand black). The focus ring is charcoal (<code>--focus-ring</code>), not Vivid Blue and not peach.</p>
@@ -263,7 +201,7 @@ a { color: var(--link); }
       <span class="badge brand">Identity</span>
       <span class="badge">Neutral</span>
     </div>
-    <div class="banner" style="margin-top: var(--space-5)">Info banner. The message color is Vivid Blue on the info wash.</div>
+    <div class="banner info" style="margin-top: var(--space-5)">Info banner. The message color is Vivid Blue on the info wash.</div>
   </section>
 </div>
 </body>

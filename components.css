@@ -1,0 +1,94 @@
+/* MarTech Mission components 0.2.0
+   Optional classes. Load tokens.css first.
+   Every color, type, space, radius, and size here is a token.
+   Primary buttons use --action (brand black), never --brand.
+   Peach is identity only (.badge.brand).
+   Focus is --focus-ring (charcoal). Controls are 32px (--control-md).
+   --font-ui is Poppins.
+*/
+
+.btn {
+  box-sizing: border-box;
+  height: var(--control-md);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 0 var(--space-3);
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text);
+  font: 500 var(--text-md) / var(--lh-md) var(--font-ui);
+  white-space: nowrap;
+  cursor: pointer;
+}
+.btn:focus-visible { outline: none; box-shadow: var(--focus-ring); }
+.btn.focus { box-shadow: var(--focus-ring); }
+.btn[disabled] { opacity: 0.45; cursor: not-allowed; }
+.btn.primary { background: var(--action); color: var(--gray-0); }
+.btn.primary:hover { background: var(--action-hover); }
+.btn.secondary {
+  background: var(--bg-surface);
+  color: var(--text);
+  border-color: var(--border-strong);
+}
+.btn.secondary:hover { background: var(--bg-subtle); }
+.btn.ghost { background: transparent; color: var(--text); }
+.btn.ghost:hover { background: var(--bg-hover); }
+.btn.danger { background: var(--danger-700); color: var(--gray-0); }
+.btn.danger-ghost { background: transparent; color: var(--danger-700); }
+.btn.danger-ghost:hover { background: var(--danger-50); }
+
+.field { display: flex; flex-direction: column; gap: var(--space-1); }
+.field > span {
+  font: 500 var(--text-sm) / var(--lh-sm) var(--font-ui);
+  color: var(--text-muted);
+}
+.input {
+  box-sizing: border-box;
+  height: var(--control-md);
+  min-width: 0;
+  padding: 0 var(--space-3);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+  color: var(--text);
+  font: var(--text-md) / var(--lh-md) var(--font-ui);
+}
+.input::placeholder { color: var(--text-faint); }
+.input:focus-visible { outline: none; box-shadow: var(--focus-ring); }
+.input.edited { background: var(--warning-50); border-color: var(--warning-300); }
+.input.invalid { border-color: var(--danger-700); }
+
+.badge {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  height: var(--space-5);
+  padding: 0 var(--space-2);
+  border-radius: var(--radius-full);
+  background: var(--bg-hover);
+  color: var(--text-muted);
+  font: 600 var(--text-xs) / var(--lh-xs) var(--font-ui);
+  white-space: nowrap;
+}
+.badge.success { background: var(--success-50); color: var(--success-700); }
+.badge.warning { background: var(--warning-50); color: var(--warning-700); }
+.badge.danger { background: var(--danger-50); color: var(--danger-700); }
+.badge.info { background: var(--info-50); color: var(--info-700); }
+.badge.brand { background: var(--brand-50); color: var(--brand-700); }
+
+.banner {
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text);
+  font: var(--text-md) / var(--lh-md) var(--font-ui);
+}
+.banner.info { background: var(--info-50); color: var(--info); border-color: var(--info); }
+.banner.warning { background: var(--warning-50); color: var(--warning-700); border-color: var(--warning-300); }
+.banner.danger { background: var(--danger-50); color: var(--danger-700); border-color: var(--danger-700); }
