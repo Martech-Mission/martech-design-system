@@ -32,7 +32,7 @@ h2 {
 code { font-family: var(--font-mono); font-size: var(--text-xs); color: var(--text-muted); }
 .swatches { display: flex; flex-wrap: wrap; gap: var(--space-3); }
 .swatch { margin: 0; width: 132px; }
-.chip {
+.swatch-fill {
   display: block;
   height: var(--control-lg);
   border-radius: var(--radius-md);
@@ -78,6 +78,7 @@ code { font-family: var(--font-mono); font-size: var(--text-xs); color: var(--te
 a { color: var(--link); }
 .row { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center; }
 .stack { display: flex; flex-direction: column; gap: var(--space-2); max-width: 280px; }
+.demo { max-width: calc(var(--space-8) * 12); }
 </style>
 </head>
 <body>
@@ -89,19 +90,19 @@ a { color: var(--link); }
     <h2>Brand</h2>
     <div class="swatches">
       <figure class="swatch">
-        <span class="chip" style="background: var(--brand)"></span>
+        <span class="swatch-fill" style="background: var(--brand)"></span>
         <figcaption><b>Peach</b><code>--brand</code> Identity only. Not a button fill.</figcaption>
       </figure>
       <figure class="swatch">
-        <span class="chip" style="background: var(--text)"></span>
+        <span class="swatch-fill" style="background: var(--text)"></span>
         <figcaption><b>Black</b><code>--text</code> <code>--action</code> Text, primary button, focus ring.</figcaption>
       </figure>
       <figure class="swatch">
-        <span class="chip" style="background: var(--info)"></span>
+        <span class="swatch-fill" style="background: var(--info)"></span>
         <figcaption><b>Vivid Blue</b><code>--info</code> <code>--link</code></figcaption>
       </figure>
       <figure class="swatch">
-        <span class="chip" style="background: var(--gray-0)"></span>
+        <span class="swatch-fill" style="background: var(--gray-0)"></span>
         <figcaption><b>White</b><code>--gray-0</code> <code>--bg-surface</code></figcaption>
       </figure>
     </div>
@@ -112,40 +113,40 @@ a { color: var(--link); }
   <section>
     <h2>Product extension · gray</h2>
     <div class="swatches">
-      <figure class="swatch"><span class="chip" style="background: var(--gray-0)"></span><figcaption><code>--gray-0</code></figcaption></figure>
-      <figure class="swatch"><span class="chip" style="background: var(--gray-25)"></span><figcaption><code>--gray-25</code></figcaption></figure>
-      <figure class="swatch"><span class="chip" style="background: var(--gray-50)"></span><figcaption><code>--gray-50</code></figcaption></figure>
-      <figure class="swatch"><span class="chip" style="background: var(--gray-100)"></span><figcaption><code>--gray-100</code></figcaption></figure>
-      <figure class="swatch"><span class="chip" style="background: var(--gray-200)"></span><figcaption><code>--gray-200</code></figcaption></figure>
-      <figure class="swatch"><span class="chip" style="background: var(--gray-300)"></span><figcaption><code>--gray-300</code></figcaption></figure>
-      <figure class="swatch"><span class="chip" style="background: var(--gray-500)"></span><figcaption><code>--gray-500</code></figcaption></figure>
-      <figure class="swatch"><span class="chip" style="background: var(--gray-600)"></span><figcaption><code>--gray-600</code></figcaption></figure>
-      <figure class="swatch"><span class="chip" style="background: var(--gray-800)"></span><figcaption><code>--gray-800</code></figcaption></figure>
-      <figure class="swatch"><span class="chip" style="background: var(--gray-900)"></span><figcaption><code>--gray-900</code> Ramp step, not brand black.</figcaption></figure>
+      <figure class="swatch"><span class="swatch-fill" style="background: var(--gray-0)"></span><figcaption><code>--gray-0</code></figcaption></figure>
+      <figure class="swatch"><span class="swatch-fill" style="background: var(--gray-25)"></span><figcaption><code>--gray-25</code></figcaption></figure>
+      <figure class="swatch"><span class="swatch-fill" style="background: var(--gray-50)"></span><figcaption><code>--gray-50</code></figcaption></figure>
+      <figure class="swatch"><span class="swatch-fill" style="background: var(--gray-100)"></span><figcaption><code>--gray-100</code></figcaption></figure>
+      <figure class="swatch"><span class="swatch-fill" style="background: var(--gray-200)"></span><figcaption><code>--gray-200</code></figcaption></figure>
+      <figure class="swatch"><span class="swatch-fill" style="background: var(--gray-300)"></span><figcaption><code>--gray-300</code></figcaption></figure>
+      <figure class="swatch"><span class="swatch-fill" style="background: var(--gray-500)"></span><figcaption><code>--gray-500</code></figcaption></figure>
+      <figure class="swatch"><span class="swatch-fill" style="background: var(--gray-600)"></span><figcaption><code>--gray-600</code></figcaption></figure>
+      <figure class="swatch"><span class="swatch-fill" style="background: var(--gray-800)"></span><figcaption><code>--gray-800</code></figcaption></figure>
+      <figure class="swatch"><span class="swatch-fill" style="background: var(--gray-900)"></span><figcaption><code>--gray-900</code> Ramp step, not brand black.</figcaption></figure>
     </div>
   </section>
 
   <section>
     <h2>Product extension · status</h2>
     <div class="swatches">
-      <figure class="swatch"><span class="chip" style="background: var(--success-50)"></span><figcaption><code>--success-50</code></figcaption></figure>
-      <figure class="swatch"><span class="chip" style="background: var(--success-700)"></span><figcaption><code>--success-700</code></figcaption></figure>
-      <figure class="swatch"><span class="chip" style="background: var(--warning-50)"></span><figcaption><code>--warning-50</code></figcaption></figure>
-      <figure class="swatch"><span class="chip" style="background: var(--warning-300)"></span><figcaption><code>--warning-300</code></figcaption></figure>
-      <figure class="swatch"><span class="chip" style="background: var(--warning-700)"></span><figcaption><code>--warning-700</code></figcaption></figure>
-      <figure class="swatch"><span class="chip" style="background: var(--danger-50)"></span><figcaption><code>--danger-50</code></figcaption></figure>
-      <figure class="swatch"><span class="chip" style="background: var(--danger-700)"></span><figcaption><code>--danger-700</code></figcaption></figure>
-      <figure class="swatch"><span class="chip" style="background: var(--info-50)"></span><figcaption><code>--info-50</code> Wash behind Vivid Blue.</figcaption></figure>
+      <figure class="swatch"><span class="swatch-fill" style="background: var(--success-50)"></span><figcaption><code>--success-50</code></figcaption></figure>
+      <figure class="swatch"><span class="swatch-fill" style="background: var(--success-700)"></span><figcaption><code>--success-700</code></figcaption></figure>
+      <figure class="swatch"><span class="swatch-fill" style="background: var(--warning-50)"></span><figcaption><code>--warning-50</code></figcaption></figure>
+      <figure class="swatch"><span class="swatch-fill" style="background: var(--warning-300)"></span><figcaption><code>--warning-300</code></figcaption></figure>
+      <figure class="swatch"><span class="swatch-fill" style="background: var(--warning-700)"></span><figcaption><code>--warning-700</code></figcaption></figure>
+      <figure class="swatch"><span class="swatch-fill" style="background: var(--danger-50)"></span><figcaption><code>--danger-50</code></figcaption></figure>
+      <figure class="swatch"><span class="swatch-fill" style="background: var(--danger-700)"></span><figcaption><code>--danger-700</code></figcaption></figure>
+      <figure class="swatch"><span class="swatch-fill" style="background: var(--info-50)"></span><figcaption><code>--info-50</code> Wash behind Vivid Blue.</figcaption></figure>
     </div>
   </section>
 
   <section>
     <h2>Product extension · heat</h2>
     <div class="swatches">
-      <figure class="swatch"><span class="chip" style="background: var(--data-1)"></span><figcaption><code>--data-1</code></figcaption></figure>
-      <figure class="swatch"><span class="chip" style="background: var(--data-2)"></span><figcaption><code>--data-2</code></figcaption></figure>
-      <figure class="swatch"><span class="chip" style="background: var(--data-3)"></span><figcaption><code>--data-3</code></figcaption></figure>
-      <figure class="swatch"><span class="chip" style="background: var(--data-4)"></span><figcaption><code>--data-4</code></figcaption></figure>
+      <figure class="swatch"><span class="swatch-fill" style="background: var(--data-1)"></span><figcaption><code>--data-1</code></figcaption></figure>
+      <figure class="swatch"><span class="swatch-fill" style="background: var(--data-2)"></span><figcaption><code>--data-2</code></figcaption></figure>
+      <figure class="swatch"><span class="swatch-fill" style="background: var(--data-3)"></span><figcaption><code>--data-3</code></figcaption></figure>
+      <figure class="swatch"><span class="swatch-fill" style="background: var(--data-4)"></span><figcaption><code>--data-4</code></figcaption></figure>
     </div>
   </section>
 
@@ -202,6 +203,71 @@ a { color: var(--link); }
       <span class="badge">Neutral</span>
     </div>
     <div class="banner info" style="margin-top: var(--space-5)">Info banner. The message color is Vivid Blue on the info wash.</div>
+
+    <div class="row" style="margin-top: var(--space-5)">
+      <button class="btn secondary sm" type="button">Small</button>
+      <button class="btn secondary lg" type="button">Large</button>
+      <button class="icon-btn" type="button" aria-label="Settings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="3"/></svg></button>
+      <button class="link-btn" type="button">Clear all</button>
+      <button class="btn secondary" type="button">Rates <span class="count">2</span></button>
+    </div>
+
+    <div class="stack" style="margin-top: var(--space-5)">
+      <label class="field">
+        <span>Edited</span>
+        <input class="input edited" type="text" value="0.5" />
+        <span class="help">Edited</span>
+      </label>
+      <label class="field">
+        <span>Invalid</span>
+        <input class="input invalid focus" type="text" value="1.5" />
+        <span class="err">Hours must be a number.</span>
+      </label>
+    </div>
+
+    <div class="row" style="margin-top: var(--space-5)">
+      <div class="segmented">
+        <button class="on" type="button">External</button>
+        <button type="button">Internal</button>
+      </div>
+      <button class="picker" type="button"><span class="k">Client</span> Indigitous <span class="chev">▾</span></button>
+      <div class="stepper">
+        <button class="picker" type="button" aria-label="Previous">‹</button>
+        <button class="picker" type="button">Aug 26 – Sep 25</button>
+        <button class="picker" type="button" aria-label="Next">›</button>
+      </div>
+    </div>
+
+    <div class="filter-bar" style="margin-top: var(--space-5)">
+      <span class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input class="input" type="search" placeholder="Search" />
+        <kbd>/</kbd>
+      </span>
+      <span class="chip"><span class="k">Person</span> Desiree <button type="button" aria-label="Remove">×</button></span>
+      <span class="chip add">+ Add filter</span>
+    </div>
+
+    <div class="menu demo" style="margin-top: var(--space-5)">
+      <div class="menu-head"><span class="n">Account</span></div>
+      <div class="menu-sep"></div>
+      <button class="menu-item hl" type="button">Change password</button>
+      <button class="menu-item" type="button">Keyboard shortcuts <kbd>?</kbd></button>
+      <div class="menu-label">Workspace</div>
+      <button class="menu-item" type="button">Sync</button>
+      <div class="menu-sep"></div>
+      <button class="menu-item danger" type="button">Sign out</button>
+    </div>
+
+    <div class="dialog demo" style="margin-top: var(--space-5)">
+      <header><h4>Change password</h4><p>You'll stay signed in on this device.</p></header>
+      <div class="body">
+        <label class="field"><span>New password</span><input class="input" type="password" value="••••••" /></label>
+      </div>
+      <footer><button class="btn ghost" type="button">Cancel</button><button class="btn primary" type="button">Update password</button></footer>
+    </div>
+
+    <div class="toast demo" style="margin-top: var(--space-5)">Merged the entries. <button class="btn ghost sm" type="button">Undo</button></div>
   </section>
 </div>
 </body>

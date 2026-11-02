@@ -11,7 +11,7 @@ David owns releases. Apps adopt a tag when they choose. Nothing here tracks `mai
 | File | Purpose |
 | --- | --- |
 | `tokens.css` | CSS custom properties. Copy this from a tag. |
-| `components.css` | Optional button, field, badge, and banner classes. Copy it the same way. |
+| `components.css` | Optional controls. Copy it the same way. |
 | `tokens.md` | What each token means, and which ones are product extensions. |
 | `brand/README.md` | Brand color, type, and logo rules this file is allowed to follow. |
 | `CHANGELOG.md` | What changed in each tag. |
@@ -34,7 +34,7 @@ printf '%s\n' v0.1.0 > public/css/TOKENS_VERSION
 
 A later tag is adopted the same way, in that app's own change, after reading `CHANGELOG.md`.
 
-Copy `components.css` from that same tag if the app wants the classes. They are optional, and they do not change the tokens. Timesheets would put the file at `public/css/components.css` and still record the one tag in `public/css/TOKENS_VERSION`. Link `tokens.css` before `components.css`.
+Copy `components.css` from that same tag if the app wants the classes. They are optional, and they do not change the tokens. Timesheets would put the file at `public/css/components.css` and still record the one tag in `public/css/TOKENS_VERSION`. Link `tokens.css` before `components.css`. v0.3.0 adds toast, dialog, menu, picker, segmented, and chip, plus icon button, search, stepper, link button, and count. The app shell, tables, navigation, and the account cluster stay in the app.
 
 ## Consumers
 
