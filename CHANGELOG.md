@@ -5,6 +5,13 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.2] - 2026-11-03
+
+### Fixed
+
+- `.badge` sizes to its label (`width: fit-content`), including inside the preview type grid.
+- Radius swatches in `preview.html` are boxes, so each corner radius is visible. The space scale is unchanged.
+
 ## [0.3.1] - 2026-11-03
 
 ### Changed
@@ -43,6 +50,7 @@ Peach is identity only. It is not a button fill.
 
 This version does not include components, font files, PDF styles, share-page styles, or email styles.
 
+[0.3.2]: https://github.com/Martech-Mission/martech-design-system/releases/tag/v0.3.2
 [0.3.1]: https://github.com/Martech-Mission/martech-design-system/releases/tag/v0.3.1
 [0.3.0]: https://github.com/Martech-Mission/martech-design-system/releases/tag/v0.3.0
 [0.2.0]: https://github.com/Martech-Mission/martech-design-system/releases/tag/v0.2.0

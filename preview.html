@@ -58,8 +58,9 @@ code { font-family: var(--font-mono); font-size: var(--text-xs); color: var(--te
 .step figcaption { margin-top: var(--space-1); }
 .radii { display: flex; flex-wrap: wrap; gap: var(--space-4); }
 .radius {
-  width: calc(var(--space-8) + var(--space-6));
-  height: calc(var(--space-8) + var(--space-6));
+  display: block;
+  width: calc(var(--space-8) * 2 + var(--space-4));
+  height: calc(var(--space-8) + var(--space-4));
   background: var(--bg-surface);
   border: 1px solid var(--border-strong);
 }
@@ -72,6 +73,7 @@ code { font-family: var(--font-mono); font-size: var(--text-xs); color: var(--te
   grid-template-columns: 180px 1fr;
   gap: var(--space-4);
   align-items: baseline;
+  justify-items: start;
   padding: var(--space-3) 0;
   border-bottom: 1px solid var(--border);
 }
